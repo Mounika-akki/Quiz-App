@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="script.js" defer></script>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <title>Open Trivia DB Quiz</title>
+  </head>
+  <body onload="loadMainPage()">
+    <div class="total">
+      <div class="middle">
+        <div class="currentDetails">
+          <span class="leftDetails">
+            <div>
+              <span>Question</span>
+              <span id="qNum"></span>
+            </div>
+            <div>
+              <progress
+                class="range"
+                id="range"
+                min="0"
+                max="10"
+                value="0"
+                id="progress"
+              ></progress>
+            </div>
+          </span>
+          <span class="rightDetails">
+            <div>Score</div>
+            <div id="score"></div>
+          </span>
+        </div>
+        <div class="qaBlock">
+          <p id="question"></p>
+          <button
+            type="button"
+            class="btn btn-light btn-lg btn-block optionButtons"
+          >
+            <div class="option">A</div>
+            <div class="answers" id="optA" onclick="changeQnum(this)">
+              options
+            </div>
+          </button>
+          <button
+            type="button"
+            class="btn btn-light btn-lg btn-block optionButtons"
+          >
+            <div class="option">B</div>
+            <div class="answers" id="optB" onclick="changeQnum(this)">
+              options
+            </div>
+          </button>
+          <button
+            type="button"
+            class="btn btn-light btn-lg btn-block optionButtons"
+          >
+            <div class="option">C</div>
+            <div class="answers" id="optC" onclick="changeQnum(this)">
+              options
+            </div>
+          </button>
+          <button
+            type="button"
+            class="btn btn-light btn-lg btn-block optionButtons"
+          >
+            <div class="option">D</div>
+            <div class="answers" id="optD" onclick="changeQnum(this)">
+              options
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+    `;
+  </body>
+</html>
